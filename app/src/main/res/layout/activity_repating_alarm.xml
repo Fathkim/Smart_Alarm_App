@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".OneTimeAlarmActivity">
+
+    <TextView
+        android:id="@+id/tv_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/txt_set"
+        android:textColor="@color/gray"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_one_time_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/txt_repeating_alarm"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="@id/tv_set"
+        app:layout_constraintTop_toBottomOf="@id/tv_set" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:contentDescription="@string/content_image_icon_one_time_alarm"
+        android:src="@drawable/ic_one_time"
+        app:layout_constraintBottom_toBottomOf="@id/tv_one_time_alarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_set" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:background="@drawable/bg_rounded_white"
+        android:padding="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_one_time_alarm">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_time_repeting"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:cardBackgroundColor="@color/lightBlue"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_once_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/rubik_regular"
+                android:maxLines="1"
+                android:text="@string/txt_time"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_set_time_repeting"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="15dp"
+                android:text="@string/txt_set_time"
+                android:textAllCaps="false"
+                android:textSize="11sp" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cv_time_repeting"
+            android:text="Note"
+            android:id="@+id/tv_note_repeting"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rubik_medium"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_note_repeting"
+            android:hint="Input Your Note"
+            app:layout_constraintTop_toBottomOf="@+id/tv_note_repeting"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/rubik_regular"
+            android:backgroundTint="#647aff"
+            android:textColor="@color/blueTeks"
+            android:autofillHints="Alarm Now"
+            android:inputType="text"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_add"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/rubik_medium"
+            android:textSize="18sp"
+            android:text="Add Set Alarm"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/edt_note_repeting"
+            android:background="@drawable/bg_rounded_blue"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_rounded_white_stroke"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/blueTeks"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/btn_add"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
